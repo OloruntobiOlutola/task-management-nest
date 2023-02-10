@@ -1,8 +1,8 @@
-import { Tasks } from './tasks.model';
+import { Task } from './task.entity';
 
 export interface TaskResponse {
   status: string;
-  tasks?: Tasks[];
-  task?: Tasks;
+  tasks?: Task[];
+  task?: Task;
   results?: number;
 }
