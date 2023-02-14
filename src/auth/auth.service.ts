@@ -56,4 +56,9 @@ export class AuthService {
   private async hashPassword(salt: string, password: string): Promise<string> {
     return await bcrypt.hash(password, salt);
   }
+
+  async findAllUsers() {
+    const users = await this.userRepository.find();
+    return users;
+  }
 }

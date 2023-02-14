@@ -21,8 +21,8 @@ export class User extends BaseEntity {
   @Column()
   password: string;
 
-  @OneToMany(() => Task, (task) => task.user)
-  tasks: Task[];
+  // @OneToMany(() => Task, (task) => task.user)
+  // tasks: Task[];
 
   async validatePassword(password: string) {
     const user = await bcrypt.compare(password, this.password);
