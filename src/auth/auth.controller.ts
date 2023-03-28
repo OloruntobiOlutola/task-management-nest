@@ -25,7 +25,6 @@ export class AuthController {
     const users = await this.authService.findAllUsers();
     return {
       ...users,
-      status: 'success',
     };
   }
 }
